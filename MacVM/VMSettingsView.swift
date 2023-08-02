@@ -38,6 +38,7 @@ struct VMSettingsView: View {
     }()
     
     var body: some View {
+        
         Form {
             Section {
                 Picker("CPU Count", selection: $content.cpuCount) {

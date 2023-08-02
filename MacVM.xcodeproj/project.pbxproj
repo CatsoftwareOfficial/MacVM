@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		01B37758281D772700BB9111 /* VMControlOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B37757281D772700BB9111 /* VMControlOverlay.swift */; };
 		01B3775A281F06F900BB9111 /* VMSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B37759281F06F900BB9111 /* VMSettingsView.swift */; };
+		490E2CCA2A75600100B40CDB /* VmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E2CC72A75600100B40CDB /* VmManager.swift */; };
+		490E2CCE2A75604100B40CDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E2CCD2A75604100B40CDB /* ContentView.swift */; };
 		CC4E3630268AD4E400AA5EA1 /* MacVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E362F268AD4E400AA5EA1 /* MacVMApp.swift */; };
 		CC4E3634268AD4E500AA5EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4E3633268AD4E500AA5EA1 /* Assets.xcassets */; };
-		CC4E3637268AD4E500AA5EA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4E3636268AD4E500AA5EA1 /* Preview Assets.xcassets */; };
 		CC4E363E268AD76000AA5EA1 /* VMDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E363D268AD76000AA5EA1 /* VMDocument.swift */; };
 		CC4E3640268AD7A300AA5EA1 /* VMContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E363F268AD7A300AA5EA1 /* VMContent.swift */; };
 		CC4E3642268AD85400AA5EA1 /* VMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E3641268AD85400AA5EA1 /* VMView.swift */; };
@@ -23,10 +24,11 @@
 /* Begin PBXFileReference section */
 		01B37757281D772700BB9111 /* VMControlOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMControlOverlay.swift; sourceTree = "<group>"; };
 		01B37759281F06F900BB9111 /* VMSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMSettingsView.swift; sourceTree = "<group>"; };
+		490E2CC72A75600100B40CDB /* VmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmManager.swift; sourceTree = "<group>"; };
+		490E2CCD2A75604100B40CDB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC4E362C268AD4E400AA5EA1 /* MacVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4E362F268AD4E400AA5EA1 /* MacVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacVMApp.swift; sourceTree = "<group>"; };
 		CC4E3633268AD4E500AA5EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC4E3636268AD4E500AA5EA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC4E363D268AD76000AA5EA1 /* VMDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMDocument.swift; sourceTree = "<group>"; };
 		CC4E363F268AD7A300AA5EA1 /* VMContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMContent.swift; sourceTree = "<group>"; };
 		CC4E3641268AD85400AA5EA1 /* VMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490E2CC62A75600100B40CDB /* VirtualMachineDashboardApp */ = {
+			isa = PBXGroup;
+			children = (
+				490E2CC72A75600100B40CDB /* VmManager.swift */,
+				490E2CCD2A75604100B40CDB /* ContentView.swift */,
+			);
+			path = VirtualMachineDashboardApp;
+			sourceTree = "<group>";
+		};
+		490E2CCF2A7560D700B40CDB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		CC4E3623268AD4E400AA5EA1 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CC4E3644268AD92F00AA5EA1 /* MacVM.entitlements */,
+				490E2CC62A75600100B40CDB /* VirtualMachineDashboardApp */,
 				CC4E3643268AD8DB00AA5EA1 /* Info.plist */,
 				CC4E362F268AD4E400AA5EA1 /* MacVMApp.swift */,
 				CC4E3641268AD85400AA5EA1 /* VMView.swift */,
@@ -79,17 +98,9 @@
 				CC4E363F268AD7A300AA5EA1 /* VMContent.swift */,
 				CC4E3645268ADC6800AA5EA1 /* VMInstance.swift */,
 				CC4E3633268AD4E500AA5EA1 /* Assets.xcassets */,
-				CC4E3635268AD4E500AA5EA1 /* Preview Content */,
+				490E2CCF2A7560D700B40CDB /* Preview Content */,
 			);
 			path = MacVM;
-			sourceTree = "<group>";
-		};
-		CC4E3635268AD4E500AA5EA1 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CC4E3636268AD4E500AA5EA1 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,8 +130,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1400;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CC4E362B268AD4E400AA5EA1 = {
 						CreatedOnToolsVersion = 13.0;
@@ -150,7 +161,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4E3637268AD4E500AA5EA1 /* Preview Assets.xcassets in Resources */,
 				CC4E3634268AD4E500AA5EA1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490E2CCA2A75600100B40CDB /* VmManager.swift in Sources */,
 				CCD1A9B5268C34AD001E87AC /* VMUIView.swift in Sources */,
 				CC4E3630268AD4E400AA5EA1 /* MacVMApp.swift in Sources */,
 				CC4E3648268AE5A800AA5EA1 /* VMInstallView.swift in Sources */,
@@ -171,6 +182,7 @@
 				01B3775A281F06F900BB9111 /* VMSettingsView.swift in Sources */,
 				CC4E3646268ADC6800AA5EA1 /* VMInstance.swift in Sources */,
 				01B37758281D772700BB9111 /* VMControlOverlay.swift in Sources */,
+				490E2CCE2A75604100B40CDB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +222,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -272,6 +285,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -297,16 +311,16 @@
 		CC4E363B268AD4E500AA5EA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacVM/MacVM.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MacVM/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F4QL9A2T88;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -333,16 +347,16 @@
 		CC4E363C268AD4E500AA5EA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacVM/MacVM.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MacVM/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F4QL9A2T88;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
