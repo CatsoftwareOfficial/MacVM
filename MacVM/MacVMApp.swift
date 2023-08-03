@@ -15,7 +15,7 @@ struct MacVMApp: App {
         DocumentGroup {
             VMDocument()
         } editor: { configuration in
-            ContentView(
+            DashboardView(
                  document: configuration.document,
                 fileURL: configuration.fileURL
             ).environmentObject(vmManager)

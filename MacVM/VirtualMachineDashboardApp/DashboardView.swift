@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DashboardView: View {
+    @State private var isPresentingVMView = false
     @EnvironmentObject private var vmManager: VmManager
     @ObservedObject var document: VMDocument
     var fileURL: URL?
@@ -29,7 +30,8 @@ struct ContentView: View {
                             } else {
                          // Simulate opening the virtual machine.
                         // Replace this with the actual code to open the VM.
-                        print("Opening VM: \(vm.name)")
+                                
+                                 vm.stop()
                                                                 }
                                 }
                             }
@@ -40,12 +42,21 @@ struct ContentView: View {
                 document: document,
                 state: document.vmInstallationState
             ))
+            
+            Button("Don't click here") {
+                                isPresentingVMView = true
+                            }
+            
         
             
             
             }
             .navigationTitle("Virtual Machines")
             .frame(width: 1000, height: 600)
+            .sheet(isPresented: $isPresentingVMView) {
+                VMView(document: document, fileURL: fileURL)
+                                    
+                            }
         }
         
 
@@ -86,7 +97,7 @@ struct VMGridView: View {
             Image(systemName: vm.isRunning ? "lock.open.desktopcomputer" : "lock.desktopcomputer")
                 .font(.system(size: 50))
                 .foregroundColor(vm.isRunning ? .green : .red)
-                .padding()
+                .padding(25)
         }
         .background(Color.gray.opacity(0.1))
         .cornerRadius(10)
